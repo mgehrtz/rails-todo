@@ -90,7 +90,7 @@ $resetBlue: #2460A7;
         color: #fff;
     }
 }
-.task[data-completed=true] {
+.task.completed {
 
     color: #f7f7f7;
     background-color: $successGreen !important;
