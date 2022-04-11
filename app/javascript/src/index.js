@@ -56,7 +56,7 @@ $(document).on('submit', 'form', function(e) {
 
         var completedClass = '';
         
-        if (task.completed) {
+        if (response.task.completed) {
             completedClass = 'completed';
         }
 
