@@ -1,3 +1,105 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Variables
+$errorRed: #cc0000;
+$successGreen: #39c16c;
+$resetBlue: #2460A7;
+
+#add-task-wrapper {
+    margin-top: 2rem;
+
+    form {
+        display: flex;
+        justify-content: center;
+    }
+    input {
+        font-size: 0.9rem;
+        line-height: 45px;
+        border: 1px solid #eeeeee;
+        background-color: #f7f7f7;
+        border-radius: 4px;
+        min-width: 300px;
+        margin-right: 0.5rem;
+        padding: 0 1rem;
+    }
+    button {
+        width: 45px;
+        font-size: 1rem;
+        line-height: 45px;
+        border-radius: 4px;
+        background-color: #71d295;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #71d295;
+
+        i {
+            color: #fff;
+        }
+    }
+    button:hover {
+        background-color: $successGreen;
+        border-color: $successGreen;
+    }
+}
+#tasks {
+    background-color: #f1f1f1;
+    max-width: 900px;
+    padding: 2rem;
+    border: 2px solid #f6f6f6;
+    border-radius: 12px;
+    margin: 3rem auto;
+}
+#tasks .task {
+    padding: 1rem 1.5rem !important;
+    border: 1px solid #b5b5b5 !important;
+    background-color: #ffffff;
+    border-radius: 6px;
+
+    span {
+        margin-right: auto;
+    }
+    button {
+        background-color: #f7f7f7;
+        border-radius: 4px;
+        margin-left: 0.5rem;
+    }
+    .active_btn {
+        display: none;
+    }
+    .completed_btn i {
+        color: $successGreen;
+    }
+    .completed_btn:hover {
+        background-color: $successGreen;
+    }
+    .active_btn i {
+        color: $resetBlue;
+    }
+    .active_btn:hover {
+        background-color: $resetBlue;
+    }
+    .delete_btn i {
+        color: $errorRed;
+    }
+    .delete_btn:hover {
+        background-color: $errorRed;
+    }
+    button:hover i {
+        color: #fff;
+    }
+}
+.task[data-completed=true] {
+
+    color: #f7f7f7;
+    background-color: $successGreen !important;
+
+    .completed_btn {
+        display: none;
+    }
+    .active_btn {
+        display: block !important;
+    }
+    
+}
